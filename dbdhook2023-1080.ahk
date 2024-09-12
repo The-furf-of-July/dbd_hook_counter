@@ -81,13 +81,13 @@ Decrement(key) {
 }
 
 UpdateIniFile(key, change) {
-    num := IniReadValue(key)
-    num += change
-    num := Mod(num, 4)
-    IniWrite(num, FileName, key, key)
+    number := IniReadValue(key)
+    number += change
+    number := Mod(number, 4)
+    IniWrite(number, FileName, key, key)
 }
 
 IniReadValue(key) {
-    num := IniRead(FileName, key, key)
-    return num
+    number := IniRead(FileName, key, key)
+    return number
 }
